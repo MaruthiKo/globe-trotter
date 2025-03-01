@@ -7,7 +7,7 @@
 
 Globe Trotter Challenge is an interactive web game that takes players on a virtual journey around the world! Get cryptic clues about famous destinations, test your geography knowledge, and discover fascinating facts about places you may have never visited.
 
-![Game Demo Placeholder](https://via.placeholder.com/800x400?text=Globe+Trotter+Game+Demo)
+[Checkout the game demo](https://www.loom.com/share/3b77031a814f4faa9cb6311946d974c3?sid=018326ba-615d-4d60-a450-d32449bb117e)
 
 ## ✨ Features
 
@@ -63,6 +63,10 @@ globe-trotter/
 ```
 
 ## 🛠️ Getting Started
+
+### System Architecture
+
+![System Architecture](./System_Architecture.png)
 
 ### Prerequisites
 - Node.js (v14+)
