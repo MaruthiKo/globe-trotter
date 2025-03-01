@@ -16,7 +16,7 @@ from config import SECRET_KEY
 app = Flask(__name__)
 with app.app_context():
     init_db()
-CORS(app, resources={r"/api/*": {"origins": "*"}})  # Enable CORS for all routes
+CORS(app, resources={r"/api/*": {"origins": "https://globe-trotter-beta.vercel.app/"}})  # Enable CORS
 
 # Initialize database when the app starts
 init_db()

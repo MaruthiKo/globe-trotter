@@ -16,8 +16,7 @@ function Game() {
   const [error, setError] = useState('');
   const [showFeedback, setShowFeedback] = useState(false);
 
-  // TODO: Change string after deployment
-  const API_URL = process.env.REACT_APP_API_URL || 'https://your-backend-url.herokuapp.com';
+  const API_URL = process.env.REACT_APP_API_URL || 'https://globe-trotter-backend.onrender.com';
 
   const fetchDestination = async () => {
     setLoading(true);

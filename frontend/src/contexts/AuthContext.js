@@ -2,8 +2,7 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const AuthContext = createContext(null);
 
-// TODO: Change string after deployment
-const API_URL = process.env.REACT_APP_API_URL || 'https://your-backend-url.herokuapp.com';
+const API_URL = process.env.REACT_APP_API_URL || 'https://globe-trotter-backend.onrender.com';
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
