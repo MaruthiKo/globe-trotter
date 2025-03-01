@@ -14,6 +14,8 @@ import jwt
 from config import SECRET_KEY
 
 app = Flask(__name__)
+with app.app_context():
+    init_db()
 CORS(app, resources={r"/api/*": {"origins": "*"}})  # Enable CORS for all routes
 
 # Initialize database when the app starts
@@ -243,5 +245,4 @@ def check_destination_answer(destination_id, answer):
     return destination and destination['city'] == answer
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))    
-    app.run(host='0.0.0.0', port=port)
+    app.run()
