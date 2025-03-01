@@ -7,14 +7,15 @@ import uuid
 from functools import wraps
 from database import (
     init_db, get_user, create_user, update_user_score,
-    verify_user, verify_auth_token, check_password_hash, create_token
+    verify_user, verify_auth_token, create_token
 )
 import logging
 import jwt
 from config import SECRET_KEY
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/api/*": {"origins": "*"}})  # Enable CORS for all routes
+
 # Initialize database when the app starts
 init_db()
 
@@ -241,5 +242,6 @@ def check_destination_answer(destination_id, answer):
     destination = next((d for d in destinations if d['id'] == destination_id), None)
     return destination and destination['city'] == answer
 
-if __name__ == '__main__':    
-    app.run(debug=True)
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))    
+    app.run(host='0.0.0.0', port=port)

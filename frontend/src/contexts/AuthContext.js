@@ -2,6 +2,9 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const AuthContext = createContext(null);
 
+// TODO: Change string after deployment
+const API_URL = process.env.REACT_APP_API_URL || 'https://your-backend-url.herokuapp.com';
+
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [token, setToken] = useState(localStorage.getItem('auth_token'));
@@ -18,7 +21,7 @@ export const AuthProvider = ({ children }) => {
 
     const fetchUserProfile = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/user/profile', {
+            const response = await fetch(`${API_URL}/api/user/profile`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -48,7 +51,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (username, password) => {
         try {
-            const response = await fetch('http://localhost:5000/api/login', {
+            const response = await fetch(`${API_URL}/api/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -82,7 +85,7 @@ export const AuthProvider = ({ children }) => {
 
     const register = async (username, password) => {
         try {
-            const response = await fetch('http://localhost:5000/api/register', {
+            const response = await fetch(`${API_URL}/api/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

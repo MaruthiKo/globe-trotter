@@ -16,6 +16,9 @@ function Game() {
   const [error, setError] = useState('');
   const [showFeedback, setShowFeedback] = useState(false);
 
+  // TODO: Change string after deployment
+  const API_URL = process.env.REACT_APP_API_URL || 'https://your-backend-url.herokuapp.com';
+
   const fetchDestination = async () => {
     setLoading(true);
     setSelectedAnswer(null);
@@ -23,7 +26,7 @@ function Game() {
     setShowFeedback(false);
     
     try {
-      const response = await fetch('http://localhost:5000/api/destination', {
+      const response = await fetch(`${API_URL}/api/destination`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -51,7 +54,7 @@ function Game() {
     
     try {
       console.log('Checking answer:', answer, 'for destination:', destination.id);
-      const response = await fetch('http://localhost:5000/api/check-answer', {
+      const response = await fetch(`${API_URL}/api/check-answer`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
