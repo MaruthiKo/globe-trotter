@@ -18,7 +18,7 @@
       ]
     },
     {
-      "id": "tokyo-001",
+      "id": "2",
       "city": "Tokyo",
       "country": "Japan",
       "clues": [
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "id": "newyork-001",
+      "id": "3",
       "city": "New York",
       "country": "USA",
       "clues": [
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "id": "rome-001",
+      "id": "4",
       "city": "Rome",
       "country": "Italy",
       "clues": [
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "id": "sydney-001",
+      "id": "5",
       "city": "Sydney",
       "country": "Australia",
       "clues": [
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "id": "cairo-001",
+      "id": "6",
       "city": "Cairo",
       "country": "Egypt",
       "clues": [
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "id": "rio-001",
+      "id": "7",
       "city": "Rio de Janeiro",
       "country": "Brazil",
       "clues": [
@@ -120,7 +120,7 @@
       ]
     },
     {
-      "id": "istanbul-001",
+      "id": "8",
       "city": "Istanbul",
       "country": "Turkey",
       "clues": [
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "id": "london-001",
+      "id": "9",
       "city": "London",
       "country": "United Kingdom",
       "clues": [
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "id": "beijing-001",
+      "id": "10",
       "city": "Beijing",
       "country": "China",
       "clues": [
@@ -169,5 +169,97 @@
         "The city was the capital of six ancient dynasties.",
         "A famous wall stretching over 13,000 miles begins near this city."
       ]
-    }
+    },
+    {
+      "id": "11",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "clues": [
+        "Home to the Burj Khalifa, the world's tallest building.",
+        "Known for its luxury shopping and modern architecture.",
+        "A major business hub in the Middle East."
+      ],
+      "fun_fact": [
+        "Dubai has man-made islands shaped like palm trees and a world map.",
+        "The Dubai Mall is one of the largest shopping malls in the world."
+      ],
+      "trivia": [
+        "Dubai's police force uses supercars like Lamborghinis and Ferraris.",
+        "Gold ATMs are common in Dubai."
+      ]
+    },
+    {
+      "id": "12",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "clues": [
+        "Home to Table Mountain.",
+        "Known for its beautiful coastal scenery and vineyards.",
+        "The legislative capital of South Africa."
+      ],
+      "fun_fact": [
+        "Table Mountain is one of the oldest mountains in the world.",
+        "Cape Town is known as the 'Mother City' of South Africa."
+      ],
+      "trivia": [
+        "Cape Town's Kirstenbosch National Botanical Garden is one of the world's greatest botanical gardens.",
+        "The Cape of Good Hope is often mistaken as the southern tip of Africa, but it's actually Cape Agulhas."
+      ]
+    },
+    {
+      "id": "13",
+      "city": "Barcelona",
+      "country": "Spain",
+      "clues": [
+        "Known for the architectural works of Antoni Gaudí.",
+        "Home to the Sagrada Família and Park Güell.",
+        "Famous for its vibrant street life and beaches."
+      ],
+      "fun_fact": [
+        "Barcelona's La Rambla is a famous pedestrian street filled with shops and performers.",
+        "The city has a unique urban layout called 'superblocks' to reduce traffic."
+      ],
+      "trivia": [
+        "Barcelona's Boqueria Market is one of Europe's largest and most famous food markets.",
+        "The city's official languages are Catalan and Spanish."
+      ]
+    },
+    {
+      "id": "14",
+      "city": "Venice",
+      "country": "Italy",
+      "clues": [
+        "Built on 118 small islands",
+        "Known for gondola rides and canals",
+        "Hosts the Venice Film Festival"
+      ],
+      "fun_fact": [
+        "Venice’s buildings stand on wooden piles driven into the mud.",
+        "The city has no roads—only waterways and footpaths."
+      ],
+      "trivia": [
+        "The Venetian mask tradition dates back to the 13th century.",
+        "Venice is sinking at a rate of 1-2 millimeters per year."
+      ]
+    },
+    [
+      {
+        "id": "15",
+        "city": "Agra",
+        "country": "India",
+        "clues": [
+          "Home to one of the Seven Wonders of the World",
+          "Famous for Mughal-era architecture",
+          "Located on the banks of the Yamuna River"
+        ],
+        "fun_fact": [
+          "The Taj Mahal changes color depending on the time of day—pinkish at sunrise, milky white at noon, and golden under moonlight.",
+          "Agra Fort, a UNESCO site, once housed the legendary Peacock Throne before it was looted."
+        ],
+        "trivia": [
+          "The Taj Mahal took 20,000 workers and 22 years to complete.",
+          "Agra was the capital of the Mughal Empire before Shah Jahan moved it to Delhi."
+        ]
+      }
+  ]
   ]
