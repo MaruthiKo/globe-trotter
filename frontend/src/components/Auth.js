@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import '../styles/Auth.css';
 
-function Auth() {
+function Auth({ challengeInfo }) {
     const [isLogin, setIsLogin] = useState(true);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -13,51 +13,42 @@ function Auth() {
         e.preventDefault();
         setError('');
 
-        if (!username.trim() || !password.trim()) {
-            setError('Please fill in all fields');
+        if (!username || !password) {
+            setError('Please enter both username and password');
             return;
         }
 
         if (isLogin) {
             const result = await login(username, password);
             if (!result.success) {
-                setError('Invalid username or password');
-                console.error('Login error:', result.error);
+                setError(result.error || 'Login failed');
             }
         } else {
             const result = await register(username, password);
-            if (!result.success) {
-                if (result.status === 409) {
-                    setError('Username already exists. Please login instead.');
-                    // Switch to login mode and preserve the username
-                    setIsLogin(true);
-                    setPassword(''); // Clear password for security
-                } else {
-                    setError('Sorry, something went wrong. Please try again.');
-                    console.error('Registration error:', result.error);
-                }
-            } else {
-                // Registration successful, switch to login mode
-                setError('');
+            if (result.success) {
+                // Switch to login view after successful registration
                 setIsLogin(true);
-                setPassword(''); // Clear password for security
-                // Show success message
                 setError('Registration successful! Please login.');
+            } else {
+                setError(result.error || 'Registration failed');
             }
         }
     };
 
-    const switchMode = () => {
-        setIsLogin(!isLogin);
-        setError('');
-        setUsername('');
-        setPassword('');
-    };
-
     return (
         <div className="auth-container">
+            {challengeInfo && (
+                <div className="challenge-info">
+                    <h3>Challenge from {challengeInfo.username}</h3>
+                    <p>Register or login to accept this challenge and see if you can beat their score!</p>
+                </div>
+            )}
+            
             <h2>{isLogin ? 'Login' : 'Register'}</h2>
-            <form onSubmit={handleSubmit} className="auth-form">
+            
+            {error && <div className="error-message">{error}</div>}
+            
+            <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
                     <input
@@ -68,6 +59,7 @@ function Auth() {
                         placeholder="Enter your username"
                     />
                 </div>
+                
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
                     <input
@@ -78,24 +70,23 @@ function Auth() {
                         placeholder="Enter your password"
                     />
                 </div>
-                {error && (
-                    <p className={`message ${error.includes('successful') ? 'success-message' : 'error-message'}`}>
-                        {error}
-                    </p>
-                )}
+                
                 <button type="submit" className="auth-button">
                     {isLogin ? 'Login' : 'Register'}
                 </button>
             </form>
-            <p className="auth-switch">
-                {isLogin ? "Don't have an account? " : "Already have an account? "}
-                <button
-                    onClick={switchMode}
-                    className="switch-button"
-                >
-                    {isLogin ? 'Register' : 'Login'}
-                </button>
-            </p>
+            
+            <div className="auth-switch">
+                <p>
+                    {isLogin ? "Don't have an account?" : "Already have an account?"}
+                    <button 
+                        className="switch-button"
+                        onClick={() => setIsLogin(!isLogin)}
+                    >
+                        {isLogin ? 'Register' : 'Login'}
+                    </button>
+                </p>
+            </div>
         </div>
     );
 }
