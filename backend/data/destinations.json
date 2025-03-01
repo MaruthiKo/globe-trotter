@@ -1,0 +1,173 @@
+[
+    {
+      "id": "1",
+      "city": "Paris",
+      "country": "France",
+      "clues": [
+        "This city is known as the City of Light",
+        "Home to the world's most visited museum",
+        "Famous for its iron tower"
+      ],
+      "fun_fact": [
+        "The Eiffel Tower was originally intended to be a temporary structure.",
+        "Paris has only one stop sign in the entire city—most intersections rely on priority-to-the-right rules."
+      ],
+      "trivia": [
+        "This city is famous for its croissants and macarons. Bon appétit!",
+        "Paris was originally a Roman city called Lutetia."
+      ]
+    },
+    {
+      "id": "tokyo-001",
+      "city": "Tokyo",
+      "country": "Japan",
+      "clues": [
+        "This city has the world's busiest pedestrian crossing.",
+        "Home to the oldest continuous imperial dynasty in the world."
+      ],
+      "fun_fact": [
+        "This city has over 200 underground malls!",
+        "There's a building with a highway passing through its 5th, 6th, and 7th floors."
+      ],
+      "trivia": [
+        "The city was formerly known as Edo until 1868.",
+        "This metropolis has more Michelin-starred restaurants than any other city."
+      ]
+    },
+    {
+      "id": "newyork-001",
+      "city": "New York",
+      "country": "USA",
+      "clues": [
+        "This city has a famous park in the center that spans over 840 acres.",
+        "Home to a large green statue that was a gift from France."
+      ],
+      "fun_fact": [
+        "There's a hidden train platform underneath a famous hotel in this city.",
+        "Pizza delivery became popular in this city during a newspaper strike in 1945."
+      ],
+      "trivia": [
+        "This city was briefly the capital of the United States in 1789.",
+        "The city's subway system has 472 stations, the most of any system worldwide."
+      ]
+    },
+    {
+      "id": "rome-001",
+      "city": "Rome",
+      "country": "Italy",
+      "clues": [
+        "This ancient city was built on seven hills.",
+        "It's home to a famous circular amphitheater where gladiatorial contests were held."
+      ],
+      "fun_fact": [
+        "This city has over 2,000 fountains, more than any other city in the world.",
+        "People have thrown approximately $1.5 million into one of its famous fountains annually."
+      ],
+      "trivia": [
+        "The ancient Romans built a road network of over 250,000 miles radiating from this city.",
+        "This city contains the smallest country in the world within its boundaries."
+      ]
+    },
+    {
+      "id": "sydney-001",
+      "city": "Sydney",
+      "country": "Australia",
+      "clues": [
+        "This city is known for its iconic opera house with sail-shaped roofs.",
+        "It hosted the Summer Olympics in 2000."
+      ],
+      "fun_fact": [
+        "The famous harbor bridge in this city is nicknamed 'The Coathanger' due to its shape.",
+        "This city's beaches have special nets to protect swimmers from sharks."
+      ],
+      "trivia": [
+        "The opera house in this city has over one million roof tiles.",
+        "This was the first major city to see the new year due to its time zone location."
+      ]
+    },
+    {
+      "id": "cairo-001",
+      "city": "Cairo",
+      "country": "Egypt",
+      "clues": [
+        "This city is adjacent to some of the world's most famous ancient pyramids.",
+        "The longest river in the world runs through this capital city."
+      ],
+      "fun_fact": [
+        "This city is known as 'The City of a Thousand Minarets' due to its Islamic architecture.",
+        "The oldest university in the world that's still operating is located here, founded in 970 CE."
+      ],
+      "trivia": [
+        "The city's traffic is so notorious that locals joke it's faster to walk than drive.",
+        "In ancient times, this area was known as Memphis and served as the capital of Ancient Egypt."
+      ]
+    },
+    {
+      "id": "rio-001",
+      "city": "Rio de Janeiro",
+      "country": "Brazil",
+      "clues": [
+        "This city is famous for a giant statue of Christ with outstretched arms.",
+        "It's known for hosting the world's largest carnival celebration."
+      ],
+      "fun_fact": [
+        "The famous beach in this city has a sidewalk with a distinctive black and white wave pattern.",
+        "This city was once the capital of a European empire—the only time a European capital existed outside of Europe."
+      ],
+      "trivia": [
+        "The iconic statue overlooking this city weighs 635 tons and stands 98 feet tall.",
+        "This was the first South American city to host the Summer Olympics."
+      ]
+    },
+    {
+      "id": "istanbul-001",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "clues": [
+        "This city straddles two continents.",
+        "It was once known as Constantinople and Byzantium."
+      ],
+      "fun_fact": [
+        "This city is home to the world's oldest covered market, the Grand Bazaar, with over 4,000 shops.",
+        "The city has been the capital of three different empires throughout history."
+      ],
+      "trivia": [
+        "There are approximately 3,000 mosques throughout this city.",
+        "The Bosphorus Strait running through this city connects the Black Sea to the Sea of Marmara."
+      ]
+    },
+    {
+      "id": "london-001",
+      "city": "London",
+      "country": "United Kingdom",
+      "clues": [
+        "This city is famous for its iconic clock tower often incorrectly called by the name of its bell.",
+        "The monarch of the country resides in a palace in this city."
+      ],
+      "fun_fact": [
+        "The subway system in this city is the oldest in the world, opening in 1863.",
+        "Despite its reputation for rain, this city actually receives less annual rainfall than Rome, Barcelona, or Sydney."
+      ],
+      "trivia": [
+        "There are over 170 museums in this city, including one dedicated to fans and another to dental history.",
+        "The clock tower at the Houses of Parliament leans slightly at an angle of 0.04 degrees."
+      ]
+    },
+    {
+      "id": "beijing-001",
+      "city": "Beijing",
+      "country": "China",
+      "clues": [
+        "This city contains a vast imperial palace complex known as the Forbidden City.",
+        "It hosted the Summer Olympics in 2008 and will host the Winter Olympics in 2022."
+      ],
+      "fun_fact": [
+        "The Forbidden City has 9,999 rooms—purposely one room short of 10,000, which was thought to be the number of rooms in heaven.",
+        "Many taxi drivers in this city keep a cage of crickets in their cars for good luck."
+      ],
+      "trivia": [
+        "The city was the capital of six ancient dynasties.",
+        "A famous wall stretching over 13,000 miles begins near this city."
+      ]
+    }
+  ]

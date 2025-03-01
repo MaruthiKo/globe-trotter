@@ -1,0 +1,53 @@
+.share-container {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.share-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+.share-button:hover {
+  background-color: #2980b9;
+}
+
+.share-button.twitter {
+  background-color: #1da1f2;
+}
+
+.share-button.twitter:hover {
+  background-color: #1991da;
+}
+
+.share-button.facebook {
+  background-color: #4267B2;
+}
+
+.share-button.facebook:hover {
+  background-color: #365899;
+}
+
+.share-button.whatsapp {
+  background-color: #25D366;
+}
+
+.share-button.whatsapp:hover {
+  background-color: #1eb959;
+}
+
+.share-message {
+  margin-top: 10px;
+  color: #27ae60;
+  font-size: 0.9rem;
+} 

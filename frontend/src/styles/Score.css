@@ -1,0 +1,44 @@
+.score-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.score-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.score-value.correct {
+  color: #2ecc71;
+}
+
+.score-value.incorrect {
+  color: #e74c3c;
+}
+
+.high-score {
+  color: #2ecc71;
+  font-size: 0.9rem;
+  margin-top: 5px;
+} 
