@@ -156,6 +156,7 @@ def generate_options(destinations, correct_answer):
 def check_answer():
     try:
         data = request.get_json()
+        print(data)
         username = g.username
         
         if not username:
@@ -168,7 +169,9 @@ def check_answer():
             return jsonify({"error": "Destination not found"}), 404
             
         answer_correct = destination['city'] == data['answer']
-        
+        # print(f"answer_correct = {answer_correct}")
+        # print(f"destination['city'] = {destination['city']}")
+        # print(f"data['answer'] = {data['answer']}")
         # Update the user's score
         update_user_score(username, answer_correct)
             
@@ -184,7 +187,7 @@ def check_answer():
         
         return jsonify({
             "correct": answer_correct,
-            "answer": data['answer'],
+            "answer": destination['city'],
             "country": destination['country'],
             "fact": random.choice(destination['fun_fact']),
             "token": new_token,  # Include the new token

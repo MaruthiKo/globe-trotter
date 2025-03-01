@@ -7,11 +7,13 @@ function Auth({ challengeInfo }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
     const { login, register } = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
+        setSuccess('');
 
         if (!username || !password) {
             setError('Please enter both username and password');
@@ -28,7 +30,7 @@ function Auth({ challengeInfo }) {
             if (result.success) {
                 // Switch to login view after successful registration
                 setIsLogin(true);
-                setError('Registration successful! Please login.');
+                setSuccess('Registration successful! Please login.');
             } else {
                 setError(result.error || 'Registration failed');
             }
@@ -47,6 +49,7 @@ function Auth({ challengeInfo }) {
             <h2>{isLogin ? 'Login' : 'Register'}</h2>
             
             {error && <div className="error-message">{error}</div>}
+            {success && <div className="success-message">{success}</div>} {/* Display success message */}
             
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
