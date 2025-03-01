@@ -133,4 +133,3 @@ JWT_SECRET_KEY=your_secret_key_here
 - All game endpoints require authentication via JWT token
 - Tokens expire after 24 hours
 - SQLite database is used for development
-- Make sure to add `.env` and `*.db` files to `.gitignore`
