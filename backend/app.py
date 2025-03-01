@@ -47,6 +47,10 @@ def load_destinations():
     with open('data/destinations.json', 'r') as f:
         return json.load(f)
 
+@app.route('/')
+def home():
+    return "The Globe-Trotter Backend is Live"
+
 @app.route('/api/register', methods=['POST'])
 def register():
     try:
