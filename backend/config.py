@@ -1,3 +1,3 @@
 import os
 
-SECRET_KEY = os.environ.get('BACKEND_SECRET_KEY')
+SECRET_KEY = "globe_trotter"

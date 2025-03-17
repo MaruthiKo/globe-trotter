@@ -16,7 +16,7 @@ from config import SECRET_KEY
 app = Flask(__name__)
 with app.app_context():
     init_db()
-CORS(app, resources={r"/api/*": {"origins": "https://globe-trotter-beta.vercel.app"}})  # Enable CORS
+CORS(app)  # Enable CORS
 
 # Initialize database when the app starts
 init_db()
@@ -248,5 +248,5 @@ def check_destination_answer(destination_id, answer):
     destination = next((d for d in destinations if d['id'] == destination_id), None)
     return destination and destination['city'] == answer
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == '__main__':   
+    app.run(debug=True)

@@ -16,8 +16,9 @@ function Game() {
   const [error, setError] = useState('');
   const [showFeedback, setShowFeedback] = useState(false);
 
-  const API_URL = process.env.REACT_APP_API_URL || 'https://globe-trotter-backend.onrender.com';
-
+  // const API_URL = process.env.REACT_APP_API_URL || 'https://globe-trotter-backend.onrender.com';
+  const API_URL = "http://localhost:5000";
+  
   const fetchDestination = async () => {
     setLoading(true);
     setSelectedAnswer(null);
