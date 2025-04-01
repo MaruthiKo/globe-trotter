@@ -14,16 +14,16 @@ import jwt
 from config import SECRET_KEY
 
 app = Flask(__name__)
+
 with app.app_context():
     init_db()
 CORS(app)  # Enable CORS
 
-# Initialize database when the app starts
-init_db()
 
 # Set up logging
 logging.basicConfig(level=logging.ERROR)
 logger = logging.getLogger(__name__)
+
 
 def login_required(f):
     @wraps(f)
@@ -42,14 +42,17 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+
 # Load destinations data
 def load_destinations():
     with open('data/destinations.json', 'r') as f:
         return json.load(f)
 
+
 @app.route('/')
 def home():
     return "The Globe-Trotter Backend is Live"
+
 
 @app.route('/api/register', methods=['POST'])
 def register():
@@ -90,6 +93,7 @@ def register():
         return jsonify({
             "error": "An error occurred during registration"
         }), 500
+
 
 @app.route('/api/login', methods=['POST'])
 def login():
@@ -134,6 +138,7 @@ def login():
         print(f"Login exception: {str(e)}")  # Debug log
         return jsonify({"error": "An error occurred during login"}), 500
 
+
 @app.route('/api/destination', methods=['GET'])
 @login_required
 def get_random_destination():
@@ -148,6 +153,7 @@ def get_random_destination():
     
     return jsonify(response_data)
 
+
 def generate_options(destinations, correct_answer):
     incorrect_options = []
     cities = [d['city'] for d in destinations if d['city'] != correct_answer]
@@ -157,6 +163,7 @@ def generate_options(destinations, correct_answer):
     random.shuffle(all_options)
     
     return all_options
+
 
 @app.route('/api/check-answer', methods=['POST'])
 @login_required
@@ -210,11 +217,13 @@ def check_answer():
         logger.error(f"Error checking answer: {str(e)}", exc_info=True)
         return jsonify({"error": "An error occurred"}), 500
 
+
 @app.route('/api/user/profile', methods=['GET'])
 @login_required
 def get_user_profile():
     user = get_user(g.username)
     return jsonify(user)
+
 
 @app.errorhandler(Exception)
 def handle_error(error):
@@ -224,6 +233,7 @@ def handle_error(error):
     return jsonify({
         "error": "An internal server error occurred. Please try again later."
     }), 500
+
 
 # Add this function to get the current user from the token
 def get_current_user():
@@ -243,10 +253,12 @@ def get_current_user():
     except jwt.InvalidTokenError:
         return None
 
+
 def check_destination_answer(destination_id, answer):
     destinations = load_destinations()
     destination = next((d for d in destinations if d['id'] == destination_id), None)
     return destination and destination['city'] == answer
+
 
 if __name__ == '__main__':   
     app.run(debug=True)
